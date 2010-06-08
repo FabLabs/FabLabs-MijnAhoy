@@ -58,3 +58,14 @@ class ProductController < Rho::RhoController
   end
 end
 
+class ProductController < Rho::RhoController
+
+@@this_page = '/'
+
+  def initialize
+    NavBar.create :title => "NavBar test", :left => {:action => :back, :label => 'Back'}, :right => {:action => '/app/Product', :label => "NativeBar"}
+    
+  end
+
+end
+
