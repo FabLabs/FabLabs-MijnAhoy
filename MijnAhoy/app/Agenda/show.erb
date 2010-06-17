@@ -1,0 +1,44 @@
+<div id="pageTitle">
+	<h1><%= @agenda.titel%></h1>
+</div>
+
+<div id="toolbar">
+    <div id="leftItem" class="backButton"><%= link_to "Back", :action => :index %></div>
+    <div id="rightItem" class="regularButton"><%= link_to "Edit", :action => :edit, :id => @agenda.object %></div>
+</div>
+
+<div id="content">
+    <ul>
+        
+        <li>
+            <div class="itemLabel">Titel</div>
+            <div class="itemValue"><%= @agenda.titel%></div>
+        </li>
+        
+        <li>
+            <div class="itemLabel">Date</div>
+            <div class="itemValue"><%= @agenda.date%></div>
+        </li>
+        
+        <li>
+            <div class="itemLabel">Type</div>
+            <div class="itemValue"><%= @agenda.type%></div>
+        </li>
+        
+        <li>
+            <div class="itemLabel">Text</div>
+            <div class="itemValue"><%= @agenda.text%></div>
+        </li>
+        
+        <li>
+            <div class="itemLabel">Image-s</div>
+            <div class="itemValue"><%= @agenda.image-s%></div>
+        </li>
+        
+        <li>
+            <div class="itemLabel">Image-L</div>
+            <div class="itemValue"><%= @agenda.image-L%></div>
+        </li>
+        
+    </ul>
+</div>

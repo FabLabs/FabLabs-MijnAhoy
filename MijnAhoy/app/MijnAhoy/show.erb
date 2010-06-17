@@ -1,0 +1,39 @@
+<div id="pageTitle">
+	<h1><%= @mijnahoy.titel%></h1>
+</div>
+
+<div id="toolbar">
+    <div id="leftItem" class="backButton"><%= link_to "Back", :action => :index %></div>
+    <div id="rightItem" class="regularButton"><%= link_to "Edit", :action => :edit, :id => @mijnahoy.object %></div>
+</div>
+
+<div id="content">
+    <ul>
+        
+        <li>
+            <div class="itemLabel">Titel</div>
+            <div class="itemValue"><%= @mijnahoy.titel%></div>
+        </li>
+        
+        <li>
+            <div class="itemLabel">Date</div>
+            <div class="itemValue"><%= @mijnahoy.date%></div>
+        </li>
+        
+        <li>
+            <div class="itemLabel">Text</div>
+            <div class="itemValue"><%= @mijnahoy.text%></div>
+        </li>
+        
+        <li>
+            <div class="itemLabel">Image-s</div>
+            <div class="itemValue"><%= @mijnahoy.image-s%></div>
+        </li>
+        
+        <li>
+            <div class="itemLabel">Image-l</div>
+            <div class="itemValue"><%= @mijnahoy.image-l%></div>
+        </li>
+        
+    </ul>
+</div>

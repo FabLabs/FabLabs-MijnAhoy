@@ -1,0 +1,22 @@
+<div id="pageTitle">
+	<h1>New <%= @info.title %></h1>
+</div>
+
+<div id="toolbar">
+     <div id="leftItem" class="backButton"><%= link_to "Cancel", :action => :index %></div>
+</div>
+
+<div id="content">
+    <form method="POST" action="<%= url_for :action => :create %>">
+            <input type="hidden" name="id" value="<%= @info.object %>"/>
+            <ul>
+                
+                <li>
+                    <label for="info[titel]" class="fieldLabel">Titel</label>
+                    <input type="text" name="info[titel]" <%= placeholder( "Titel" ) %> />
+                </li>
+                
+            </ul>
+            <input type="submit" class="standardButton" value="Create" />
+    </form>
+</div>

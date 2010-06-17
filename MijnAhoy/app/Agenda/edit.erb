@@ -1,0 +1,48 @@
+<div id="pageTitle">
+	<h1>Edit <%= @agenda.titel%></h1>
+</div>
+
+<div id="toolbar">
+    <div id="leftItem" class="backButton"><%= link_to "Cancel", :action => :show, :id => @agenda.object %></div>
+    <div id="rightItem" class="regularButton"><%= link_to "Delete", :action => :delete, :id => @agenda.object %></div>
+</div>
+
+<div id="content">
+    <form method="POST" action="<%= url_for :action => :update %>">
+            <input type="hidden" name="id" value="<%= @agenda.object %>"/>
+            <ul>
+                
+                <li>
+                    <label for="agenda[titel]" class="fieldLabel">Titel</label>
+                    <input type="text" name="agenda[titel]" value="<%= @agenda.titel%>" <%= placeholder( "Titel" ) %> />
+                </li>
+                
+                <li>
+                    <label for="agenda[date]" class="fieldLabel">Date</label>
+                    <input type="text" name="agenda[date]" value="<%= @agenda.date%>" <%= placeholder( "Date" ) %> />
+                </li>
+                
+                <li>
+                    <label for="agenda[type]" class="fieldLabel">Type</label>
+                    <input type="text" name="agenda[type]" value="<%= @agenda.type%>" <%= placeholder( "Type" ) %> />
+                </li>
+                
+                <li>
+                    <label for="agenda[text]" class="fieldLabel">Text</label>
+                    <input type="text" name="agenda[text]" value="<%= @agenda.text%>" <%= placeholder( "Text" ) %> />
+                </li>
+                
+                <li>
+                    <label for="agenda[image-s]" class="fieldLabel">Image-s</label>
+                    <input type="text" name="agenda[image-s]" value="<%= @agenda.image-s%>" <%= placeholder( "Image-s" ) %> />
+                </li>
+                
+                <li>
+                    <label for="agenda[image-L]" class="fieldLabel">Image-l</label>
+                    <input type="text" name="agenda[image-L]" value="<%= @agenda.image-L%>" <%= placeholder( "Image-l" ) %> />
+                </li>
+                
+            </ul>
+            <input type="submit" class="standardButton" value="Update" />
+    </form>
+</div>

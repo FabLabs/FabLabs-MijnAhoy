@@ -1,0 +1,43 @@
+<div id="pageTitle">
+	<h1>Edit <%= @mijnahoy.titel%></h1>
+</div>
+
+<div id="toolbar">
+    <div id="leftItem" class="backButton"><%= link_to "Cancel", :action => :show, :id => @mijnahoy.object %></div>
+    <div id="rightItem" class="regularButton"><%= link_to "Delete", :action => :delete, :id => @mijnahoy.object %></div>
+</div>
+
+<div id="content">
+    <form method="POST" action="<%= url_for :action => :update %>">
+            <input type="hidden" name="id" value="<%= @mijnahoy.object %>"/>
+            <ul>
+                
+                <li>
+                    <label for="mijnahoy[titel]" class="fieldLabel">Titel</label>
+                    <input type="text" name="mijnahoy[titel]" value="<%= @mijnahoy.titel%>" <%= placeholder( "Titel" ) %> />
+                </li>
+                
+                <li>
+                    <label for="mijnahoy[date]" class="fieldLabel">Date</label>
+                    <input type="text" name="mijnahoy[date]" value="<%= @mijnahoy.date%>" <%= placeholder( "Date" ) %> />
+                </li>
+                
+                <li>
+                    <label for="mijnahoy[text]" class="fieldLabel">Text</label>
+                    <input type="text" name="mijnahoy[text]" value="<%= @mijnahoy.text%>" <%= placeholder( "Text" ) %> />
+                </li>
+                
+                <li>
+                    <label for="mijnahoy[image-s]" class="fieldLabel">Image-s</label>
+                    <input type="text" name="mijnahoy[image-s]" value="<%= @mijnahoy.image-s%>" <%= placeholder( "Image-s" ) %> />
+                </li>
+                
+                <li>
+                    <label for="mijnahoy[image-l]" class="fieldLabel">Image-l</label>
+                    <input type="text" name="mijnahoy[image-l]" value="<%= @mijnahoy.image-l%>" <%= placeholder( "Image-l" ) %> />
+                </li>
+                
+            </ul>
+            <input type="submit" class="standardButton" value="Update" />
+    </form>
+</div>

@@ -1,0 +1,43 @@
+<div id="pageTitle">
+	<h1>Edit <%= @mijnahoy.titel%></h1>
+</div>
+
+<div id="toolbar">
+    <div id="leftItem" class="backButton"><%= link_to "Cancel", :action => :show, :id => @mijnahoy.object %></div>
+    <div id="rightItem" class="regularButton"><%= link_to "Delete", :action => :delete, :id => @mijnahoy.object %></div>
+</div>
+
+<div id="content">
+    <form method="POST" action="<%= url_for :action => :update %>">
+            <input type="hidden" name="id" value="<%= @mijnahoy.object %>"/>
+            <ul>
+                
+                <li>
+                    <label for="mijnahoy[titel]" class="fieldLabel">Titel</label>
+                    <input type="text" name="mijnahoy[titel]" value="<%= @mijnahoy.titel%>" <%= placeholder( "Titel" ) %> />
+                </li>
+                
+                <li>
+                    <label for="mijnahoy[datum]" class="fieldLabel">Datum</label>
+                    <input type="text" name="mijnahoy[datum]" value="<%= @mijnahoy.datum%>" <%= placeholder( "Datum" ) %> />
+                </li>
+                
+                <li>
+                    <label for="mijnahoy[categorie]" class="fieldLabel">Categorie</label>
+                    <input type="text" name="mijnahoy[categorie]" value="<%= @mijnahoy.categorie%>" <%= placeholder( "Categorie" ) %> />
+                </li>
+                
+                <li>
+                    <label for="mijnahoy[text]" class="fieldLabel">Text</label>
+                    <input type="text" name="mijnahoy[text]" value="<%= @mijnahoy.text%>" <%= placeholder( "Text" ) %> />
+                </li>
+                
+                <li>
+                    <label for="mijnahoy[imagesmall]" class="fieldLabel">Imagesmall</label>
+                    <input type="text" name="mijnahoy[imagesmall]" value="<%= @mijnahoy.imagesmall%>" <%= placeholder( "Imagesmall" ) %> />
+                </li>
+                
+            </ul>
+            <input type="submit" class="standardButton" value="Update" />
+    </form>
+</div>

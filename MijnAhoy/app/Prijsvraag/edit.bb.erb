@@ -1,0 +1,24 @@
+<div id="pageTitle">
+		<h1>Edit <%= @prijsvraag.titel%></h1>
+</div>
+
+<div id="toolbar">
+    <%= link_to "Back", :action => :show, :id => @prijsvraag.object %>
+    <%= link_to "Delete", :action => :delete, :id => @prijsvraag.object %>
+</div>
+
+
+<div id="content">
+    <form method="POST" action="<%= url_for :action => :update %>">
+    	<input type="hidden" name="id" value="<%= @prijsvraag.object %>"/>
+            <table>
+        		
+                    <tr>
+            			<td class="itemLabel">Titel: </td>
+              			<td class="itemValue"><input type="text" name="prijsvraag[titel]" value="<%= @prijsvraag.titel %>"/></td>
+          		    </tr>
+        		
+            </table>
+            <input type="submit" class="standardButton" value="Update" />
+    </form>
+</div>

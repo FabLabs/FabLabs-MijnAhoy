@@ -1,0 +1,49 @@
+<div id="pageTitle">
+		<h1>Edit <%= @agenda.titel%></h1>
+</div>
+
+<div id="toolbar">
+    <%= link_to "Back", :action => :show, :id => @agenda.object %>
+    <%= link_to "Delete", :action => :delete, :id => @agenda.object %>
+</div>
+
+
+<div id="content">
+    <form method="POST" action="<%= url_for :action => :update %>">
+    	<input type="hidden" name="id" value="<%= @agenda.object %>"/>
+            <table>
+        		
+                    <tr>
+            			<td class="itemLabel">Titel: </td>
+              			<td class="itemValue"><input type="text" name="agenda[titel]" value="<%= @agenda.titel %>"/></td>
+          		    </tr>
+        		
+                    <tr>
+            			<td class="itemLabel">Date: </td>
+              			<td class="itemValue"><input type="text" name="agenda[date]" value="<%= @agenda.date %>"/></td>
+          		    </tr>
+        		
+                    <tr>
+            			<td class="itemLabel">Type: </td>
+              			<td class="itemValue"><input type="text" name="agenda[type]" value="<%= @agenda.type %>"/></td>
+          		    </tr>
+        		
+                    <tr>
+            			<td class="itemLabel">Text: </td>
+              			<td class="itemValue"><input type="text" name="agenda[text]" value="<%= @agenda.text %>"/></td>
+          		    </tr>
+        		
+                    <tr>
+            			<td class="itemLabel">Image-s: </td>
+              			<td class="itemValue"><input type="text" name="agenda[image-s]" value="<%= @agenda.image-s %>"/></td>
+          		    </tr>
+        		
+                    <tr>
+            			<td class="itemLabel">Image-l: </td>
+              			<td class="itemValue"><input type="text" name="agenda[image-L]" value="<%= @agenda.image-L %>"/></td>
+          		    </tr>
+        		
+            </table>
+            <input type="submit" class="standardButton" value="Update" />
+    </form>
+</div>

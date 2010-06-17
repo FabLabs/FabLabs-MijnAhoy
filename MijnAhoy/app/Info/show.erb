@@ -1,0 +1,19 @@
+<div id="pageTitle">
+	<h1><%= @info.titel%></h1>
+</div>
+
+<div id="toolbar">
+    <div id="leftItem" class="backButton"><%= link_to "Back", :action => :index %></div>
+    <div id="rightItem" class="regularButton"><%= link_to "Edit", :action => :edit, :id => @info.object %></div>
+</div>
+
+<div id="content">
+    <ul>
+        
+        <li>
+            <div class="itemLabel">Titel</div>
+            <div class="itemValue"><%= @info.titel%></div>
+        </li>
+        
+    </ul>
+</div>

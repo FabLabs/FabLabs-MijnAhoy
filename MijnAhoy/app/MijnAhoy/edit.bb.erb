@@ -1,0 +1,44 @@
+<div id="pageTitle">
+		<h1>Edit <%= @mijnahoy.titel%></h1>
+</div>
+
+<div id="toolbar">
+    <%= link_to "Back", :action => :show, :id => @mijnahoy.object %>
+    <%= link_to "Delete", :action => :delete, :id => @mijnahoy.object %>
+</div>
+
+
+<div id="content">
+    <form method="POST" action="<%= url_for :action => :update %>">
+    	<input type="hidden" name="id" value="<%= @mijnahoy.object %>"/>
+            <table>
+        		
+                    <tr>
+            			<td class="itemLabel">Titel: </td>
+              			<td class="itemValue"><input type="text" name="mijnahoy[titel]" value="<%= @mijnahoy.titel %>"/></td>
+          		    </tr>
+        		
+                    <tr>
+            			<td class="itemLabel">Date: </td>
+              			<td class="itemValue"><input type="text" name="mijnahoy[date]" value="<%= @mijnahoy.date %>"/></td>
+          		    </tr>
+        		
+                    <tr>
+            			<td class="itemLabel">Text: </td>
+              			<td class="itemValue"><input type="text" name="mijnahoy[text]" value="<%= @mijnahoy.text %>"/></td>
+          		    </tr>
+        		
+                    <tr>
+            			<td class="itemLabel">Image-s: </td>
+              			<td class="itemValue"><input type="text" name="mijnahoy[image-s]" value="<%= @mijnahoy.image-s %>"/></td>
+          		    </tr>
+        		
+                    <tr>
+            			<td class="itemLabel">Image-l: </td>
+              			<td class="itemValue"><input type="text" name="mijnahoy[image-l]" value="<%= @mijnahoy.image-l %>"/></td>
+          		    </tr>
+        		
+            </table>
+            <input type="submit" class="standardButton" value="Update" />
+    </form>
+</div>

@@ -1,0 +1,44 @@
+<div id="pageTitle">
+    <h1>New MijnAhoy</h1>
+</div>
+
+<div id="toolbar">
+    <%= link_to "Back", :action => :index %>
+</div>
+
+
+<div id="content">
+
+    <form method="POST" action="<%= url_for :action => :create %>">
+	    <input type="hidden" name="id" value="<%= @mijnahoy.object %>"/>
+        <table>
+    		
+    		  <tr>
+    			  <td class="itemLabel">Titel: </td>
+    			  <td class="itemValue"><input type="text" name="mijnahoy[titel]"/></td>
+    		  </tr>
+    		
+    		  <tr>
+    			  <td class="itemLabel">Date: </td>
+    			  <td class="itemValue"><input type="text" name="mijnahoy[date]"/></td>
+    		  </tr>
+    		
+    		  <tr>
+    			  <td class="itemLabel">Text: </td>
+    			  <td class="itemValue"><input type="text" name="mijnahoy[text]"/></td>
+    		  </tr>
+    		
+    		  <tr>
+    			  <td class="itemLabel">Image-s: </td>
+    			  <td class="itemValue"><input type="text" name="mijnahoy[image-s]"/></td>
+    		  </tr>
+    		
+    		  <tr>
+    			  <td class="itemLabel">Image-l: </td>
+    			  <td class="itemValue"><input type="text" name="mijnahoy[image-l]"/></td>
+    		  </tr>
+    		
+        </table>
+        <input type="submit" class="standardButton" value="Create" />
+    </form>
+</div>
