@@ -1,0 +1,51 @@
+<div id="jqt">
+
+	<div id="home" class="current">
+		<div class="toolbar">
+		<a class="button leftButton slideup"  href="#new">New</a>
+		<a class="button cubein" href="<%= url_for :action => :cover %>" target="_self">Cover</a>
+			<h1>Mijn Ahoy</h1>	
+		</div>
+		
+		<div class="vertical-scroll">
+			<div>
+    		<ul class="plastic">
+			
+        		<% @mijnahoys.each do |obj| %>
+            
+				<li class="arrow">
+					<a href="<%= url_for :action => :show, :id => obj.object %>">
+						<span class="title"><%= obj.titel %></span>
+						<span class="disclosure_indicator"></span>
+					</a>
+				</li>
+            
+        			<% end %>
+    		</ul>
+			</div>
+		</div>
+	</div>	
+
+	<div id="new" >
+	  <div class="toolbar">
+		<a href="#home" class="button leftButton slideup reverse">Cancel</a>
+		<h1>Add Story</h1>
+	  </div>
+	  		<ul>
+	
+	
+				<li>
+				  <a href="/app/Mijnahoy/new" class="project">
+					<div style="float:left;width:235px;">
+					  <small style="font-size:14px;"></small>
+					  <span class="story_name">Add new feature</span>
+					</div>
+				  </a>
+				</li>
+	
+			
+	  		</ul>
+	</div>
+	
+
+</div>
