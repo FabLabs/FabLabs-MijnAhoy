@@ -14,7 +14,7 @@ body > *, div#jqt > * {
 /* @group Toolbar */
 #jqt .toolbar {
     -webkit-box-sizing: border-box;
-   	border-bottom: 1px solid #FFF; 
+   	border-bottom: 2px solid #FFF; 
     padding: 10px;
     height: 45px;
     background: url(img/toolbar.png) #000000 repeat-x;
@@ -44,7 +44,7 @@ div#jqt.landscape .toolbar > h1 {
     margin-left: -125px;
     width: 250px;
 }
-#jqt .button, #jqt .back, #jqt .cancel, #jqt .add {
+#jqt .button, #jqt .back, #jqt .cancel, #jqt .add, #jqt .pageback  {
     position: absolute;
     overflow: hidden;
     top: 8px;
@@ -75,7 +75,7 @@ div#jqt.landscape .toolbar > h1 {
     -webkit-border-image: url(img/blueButton.png) 0 5 0 5;
     border-width: 0 5px;
 }
-#jqt .back {
+#jqt .back, #jqt .pageback  {
     left: 6px;
     right: auto;
     padding: 0;
@@ -83,9 +83,10 @@ div#jqt.landscape .toolbar > h1 {
     border-width: 0 8px 0 14px;
     -webkit-border-image: url(img/back_button.png) 0 8 0 14;
 }
-#jqt .back.active {
+#jqt .back.active, #jqt .pageback.active {
     -webkit-border-image: url(img/back_button_clicked.png) 0 8 0 14;
-    color: #aaa;
+    color: #fff;
+	text-shadow: rgba(255, 255, 255, 1) 0px 1px 5px;
 }
 #jqt .leftButton, #jqt .cancel {
     left: 6px;
@@ -457,7 +458,7 @@ div#jqt.landscape .toolbar > h1 {
     background: #cdc197;
 }
 #jqt ul.plastic {
-    background: #cdc197;
+    background: rgba(233,217,174,.2);
     color: #aaa;
     font: bold 18px "Helvetica Neue", Helvetica;
     margin: 0;
@@ -487,7 +488,7 @@ div#jqt.landscape .toolbar > h1 {
     text-transform: uppercase;
 }
 #jqt ul.plastic li:nth-child(odd) {
-    background-color: #cbb779;
+    background-color: rgba(240,227,191,.3);
 }
 #jqt ul.plastic li.arrow {
     background-image: url(img/chevron.png);

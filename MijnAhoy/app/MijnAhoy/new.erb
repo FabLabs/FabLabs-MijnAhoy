@@ -1,42 +1,49 @@
-<div id="pageTitle">
-	<h1>New <%= @mijnahoy.title %></h1>
-</div>
-
-<div id="toolbar">
-     <div id="leftItem" class="backButton"><%= link_to "Cancel", :action => :index %></div>
-</div>
-
-<div id="content">
-    <form method="POST" action="<%= url_for :action => :create %>">
-            <input type="hidden" name="id" value="<%= @mijnahoy.object %>"/>
-            <ul>
-                
-                <li>
-                    <label for="mijnahoy[titel]" class="fieldLabel">Titel</label>
-                    <input type="text" name="mijnahoy[titel]" <%= placeholder( "Titel" ) %> />
-                </li>
-                
-                <li>
-                    <label for="mijnahoy[date]" class="fieldLabel">Date</label>
-                    <input type="text" name="mijnahoy[date]" <%= placeholder( "Date" ) %> />
-                </li>
-                
-                <li>
-                    <label for="mijnahoy[text]" class="fieldLabel">Text</label>
-                    <input type="text" name="mijnahoy[text]" <%= placeholder( "Text" ) %> />
-                </li>
-                
-                <li>
-                    <label for="mijnahoy[image-s]" class="fieldLabel">Image-s</label>
-                    <input type="text" name="mijnahoy[image-s]" <%= placeholder( "Image-s" ) %> />
-                </li>
-                
-                <li>
-                    <label for="mijnahoy[image-l]" class="fieldLabel">Image-l</label>
-                    <input type="text" name="mijnahoy[image-l]" <%= placeholder( "Image-l" ) %> />
-                </li>
-                
-            </ul>
-            <input type="submit" class="standardButton" value="Create" />
-    </form>
+<div id="jqt">
+	
+	<div id="home" class="current">
+	
+	
+	<div class="toolbar">
+		<a class="button leftButton slideup reverse"  href="<%= url_for :action => :index %>">Cancel</a>
+			<h1>New <%= @mijnahoy.title %></h1>	
+	</div>
+		
+	<div class="vertical-scroll">
+		<div>
+			<form method="POST" action="<%= url_for :action => :create %>" selected="true">
+					<input type="hidden" name="id" value="<%= @mijnahoy.object %>"/>
+						<ul>
+							
+							<li>
+								<label for="mijnahoy[titel]" class="fieldLabel">Titel</label>
+								<input type="text" name="mijnahoy[titel]" <%= placeholder( "Titel" ) %> />
+							</li>
+							
+							<li>
+								<label for="mijnahoy[datum]" class="fieldLabel">Datum</label>
+								<input type="text" name="mijnahoy[datum]" <%= placeholder( "Datum" ) %> />
+							</li>
+							
+							<li>
+								<label for="mijnahoy[categorie]" class="fieldLabel">Categorie</label>
+								<input type="text" name="mijnahoy[categorie]" <%= placeholder( "Categorie" ) %> />
+							</li>
+							
+							<li>
+								<label for="mijnahoy[text]" class="fieldLabel">Text</label>
+								<input type="text" name="mijnahoy[text]" <%= placeholder( "Text" ) %> />
+							</li>
+							
+							<li>
+								<label for="mijnahoy[imagesmall]" class="fieldLabel">Imagesmall</label>
+								<input type="text" name="mijnahoy[imagesmall]" <%= placeholder( "Imagesmall" ) %> />
+							</li>
+							<li>
+								<input type="submit" class="standardButton" value="Create" />
+							</li>
+						</ul>
+						
+			</form>
+		</div>
+	</div>
 </div>

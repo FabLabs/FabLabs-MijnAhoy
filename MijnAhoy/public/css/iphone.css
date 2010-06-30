@@ -25,19 +25,19 @@ div#pageTitle h1 {
 
 /* toolbar */
 
- div#toolbar {
-/*    width: 100%;
+div#toolbar {
+    width: 100%;
     height: 50px;
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(0.0, #d6cc8b),color-stop(0.5, #c1ae4f), color-stop(1.0, #bba23c ));*/
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0.0, #aebbcb),color-stop(0.5, #8094ae), color-stop(1.0, #6e84a2));
 }
 
 div#toolbar div {
     position: absolute;
     overflow: hidden;
     text-align: center;
-} 
+}
 
- div#leftItem {
+div#toolbar div#leftItem {
     top: 10px;
     left: 10px;
     width: 50px;
@@ -50,8 +50,7 @@ div#toolbar div#centerItem {
     height: 30px;
 }
 
-
- div#rightItem {
+div#toolbar div#rightItem {
     top: 10px;
     right: 10px;
     width: 50px;
@@ -76,7 +75,7 @@ div#toolbar .backButton {
 }
 
 div#toolbar .deleteButton,
- .regularButton,
+div#toolbar .regularButton,
 div#toolbar .blueButton {
    -webkit-border-radius: 5px;
     overflow: hidden;
@@ -95,7 +94,7 @@ div#toolbar .deleteButton {
     background: -webkit-gradient(linear, left top, left bottom, color-stop(0.0, #aebbcb),color-stop(0.5, #8094ae), color-stop(1.0, #6e84a2));
 }
 
- .regularButton {
+div#toolbar .regularButton {
     background: -webkit-gradient(linear, left top, left bottom, color-stop(0.0, #92a4bc),color-stop(0.5, #476997), color-stop(1.0, #4e6c92));
 }
 

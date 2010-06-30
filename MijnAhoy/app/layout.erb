@@ -29,14 +29,22 @@
 
     <script type="text/javascript" charset="utf-8">
          var jQT = new $.jQTouch({
-				slideSelector: '#jqt li a',
-            addGlossToIcon: false,
-            startupScreen: 'jqt_startup.png',
-            statusBar: 'black'
+				slideSelector: '#jqt li a'
         });
+		
+		
 
         // Some sample Javascript functions:
-        $(function(){
+             $(function(){
+                jQT.addAnimation({
+                    name: 'slide in reverse',
+                    selector: '.pageback'
+                });
+				
+				 jQT.addAnimation({
+                    name: 'cube in reverse',
+                    selector: '.cubein'
+                });
 
             // Show a swipe event on swipe test
             $('#swipeme').addTouchHandlers().bind('swipe', function(evt, data){

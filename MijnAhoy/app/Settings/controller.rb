@@ -73,5 +73,3 @@ class SettingsController < Rho::RhoController
     redirect :action => :index, :query => {:msg => @msg}
   end
 end
-
-

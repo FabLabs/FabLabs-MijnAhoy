@@ -1,35 +1,23 @@
-<div id="jqt">
-	
-	<div id="animations" class="current">
-            
-                
-					<a class="slideup reverse" href="#home"><img src="/public/images/loading.png"/></a>
-	
-	</div>
-	
-	<div id="home" >
-		<div class="toolbar"><a class="button slideup" id="infoButton" a href="Settings">Settings</a>
-			<h1>Mijn Ahoy</h1>	
-		<a class="button leftButton"  href="/app/Settings/logout" target="_self">Logout</a>
-		</div>
-		<div class="vertical-scroll">
-			<div>
-				
-				<ul class="rounded">
-				
-					<li class="arrow"><a href="Product">Products</a></li>
-					<li class="arrow"><a href="Navbar">Navbar</a></li>
-					<li class="arrow"><a href="Product">Products</a></li>
-					<li class="arrow"><a href="Product">Products</a></li>
-					<li class="arrow"><a href="Product">Products</a></li>
-					<li class="arrow"><a href="Product">Products</a></li>
-					<li class="arrow"><a href="Product">Products</a></li>
-					<li class="arrow"><a href="Product">Products</a></li>
-					<li class="arrow"><a href="Product">Products</a></li>
-				</ul>
-				
-			</div>
-		</div>
-		
-	</div>
+<div id="pageTitle">
+    <h1>Mijnahoy</h1>
+</div>
+
+<div id="toolbar">
+    <div id="leftItem" class="blueButton"><%= link_to "Sync", :controller => :Settings, :action => :do_sync %></div>
+    <% if SyncEngine::logged_in > 0 %>
+      <div id="rightItem" class="regularButton"><%= link_to "Logout", :controller => :Settings, :action => :logout %></div>
+    <% else %>
+      <div id="rightItem" class="regularButton"><%= link_to "Login", :controller => :Settings, :action => :login %></div>
+    <% end %>
+</div>
+
+<div id="content">
+    <ul>
+        <li>
+  			<a href="Mijnahoy">
+      		<span class="title">Mijn Ahoy</span>
+      		<span class="disclosure_indicator"></span>
+  			</a>
+		</li>
+    </ul>
 </div>
